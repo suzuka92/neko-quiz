@@ -1,0 +1,128 @@
+body {
+  background-color: #00ced1;
+  font-size: 18px;  
+}
+
+
+.container {
+  width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+}
+
+#question {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+#choices {
+  list-style: none;
+  padding:0;
+  margin-bottom: 10px;
+
+
+}
+
+#choices li {
+  border: solid 1px #dcdcdc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+#choices > li.correct{
+  font-weight: bold;
+  background-color: #b3feff;
+}
+
+#choices > li.wrong{
+  font-weight: bold;
+  background-color: #ffa899;
+}
+
+
+
+#choices > li.correct::after{
+  content: "  ... 正解にゃ";
+  color: #20b2aa;
+}
+
+#choices > li.wrong::after{
+  content: "  ... シャーーーーーーー！！！";
+  color: #dc143c;
+}
+
+
+
+
+
+#btn {
+  background-color: #ffd700;
+  border-radius: 10px; 
+  padding: 10px;
+  margin: 20px 10px 10px 10px;
+  text-align: center;
+  border-bottom: solid 5px #b39800;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#btn.disabled {
+  opacity: 0.4;
+}
+
+#btn:active {
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  border-bottom: none;
+}
+
+#result {
+  position: absolute;
+  width: 400px;
+  background-color: #fff;
+  border: solid 10px #ffd700;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 8px rgba(0,0,0,0.7);
+  text-align: center;
+  top: 100px;
+  left:0;
+  right:0;
+  margin: auto;
+  transition: 0.4s;
+}
+
+#result.hidden {
+  transform: translateY(-800px);
+}
+
+#result h1{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#result a{
+  font-weight: bold;
+  background-color: #ffd700;
+  border-radius: 10px; 
+  padding: 10px;
+  margin: 20px 10px 10px 10px;
+  text-align: center;
+  border-bottom: solid 5px #b39800;
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+
+
+#result a:active {
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  border-bottom: none;
+}
